@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/index.css">
+    {% block css-file %}<link rel="stylesheet" href="">{% endblock css-file %}
+    
+    
+
+    <!-- google font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&display=swap" rel="stylesheet">
+    <title>Hexit</title>
+</head>
+
+<body style="background-color: #222f3e">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+        <a class="navbar-brand" href="#">Hexit</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="/hex-to-rgb-and-rgb-to-hex-converter">HEX Converter</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    {% block body %}
+    
+    {% endblock body %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block css-file %} <link rel="stylesheet" href="../static/converter.css">
+{% endblock css-file %}
+{% block body %}
+<div class="main-sec">
+    <form action="/hex-to-rgb-and-rgb-to-hex-converter" method = "post" autocomplete="off">
+        {% csrf_token %}
+        
+        <input type="button" class="input result" value="{{converted_rgb}}" name = "hex-code" maxlength="7" spellcheck="false">
+        <input type="text" class="input" placeholder="Enter the Hex value" name = "hex-code" maxlength="7" spellcheck="false">
+        <br>
+        <button class="button">Convert</button>
+    </form>
+</div>
+{% endblock body %}

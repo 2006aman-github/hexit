@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <br>
+    <form class="form-inline my-5 my-lg-0 search-bar">
+        <div class="m-auto">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </div>
+    </form>
+    <br>
+    <div class="d-flex flex-wrap justify-content-center align-items-center text-center">
+        {% for rgb1 in page_obj %}
+        {% for rgb2 in rgb_li %}
+        <div class="card">
+            <div class="card-header" style="font-size: .8rem !important; background-color: #576574 !important; color: #fff !important;">rgb{{rgb1}}, rgb{{rgb2}}</div>
+            <div class="card-body" style="background-image: linear-gradient(205deg, rgb{{rgb1}}, rgb{{rgb2}});"></div>
+        </div>
+        {% endfor %}
+        {% endfor %}
+        
+    </div>
+    <div class="d-flex flex-wrap justify-content-center align-items-center text-center my-5">
+        {% if page_obj.has_previous %}
+        <a href="?page={{page_obj.previous_page_number}}" class="text-decoration-none text-primary" style="display: flex; justify-content: center; align-items: center; border: 3px solid gray; width: 75px; height: 40px;">Previous</a>
+        {% endif %}
+        <a href="?page=1" class="text-decoration-none text-primary" style="display: flex; justify-content: center; align-items: center; color: royalblue; width: 35px; height: 40px; margin: 15px 5px !important; border: 3px solid rgb(23, 46, 34); padding: 10px !important;">1</a>
+        <a href="?page=2" class="text-decoration-none text-primary" style="display: flex; justify-content: center; align-items: center; color: rgb(179, 255, 2); width: 35px; height: 40px; margin: 15px 5px !important; border: 3px solid rgb(23, 46, 34); padding: 10px !important;">2</a>
+        <a href="?page=3" class="text-decoration-none text-primary" style="display: flex; justify-content: center; align-items: center; color: royalblue; width: 35px; height: 40px; margin: 15px 5px !important; border: 3px solid rgb(23, 46, 34); padding: 10px !important;">3</a>
+        <a href="?page=4" class="text-decoration-none text-primary" style="display: flex; justify-content: center; align-items: center; color: royalblue; width: 35px; height: 40px; margin: 15px 5px !important; border: 3px solid rgb(23, 46, 34); padding: 10px !important;">4</a>
+        <a href="?page=5" class="text-decoration-none text-primary" style="display: flex; justify-content: center; align-items: center; color: royalblue; width: 35px; height: 40px; margin: 15px 5px !important; border: 3px solid rgb(23, 46, 34); padding: 10px !important;">5</a>
+        {% if page_obj.has_next %}
+        <a href="?page={{page_obj.next_page_number}}" class="text-decoration-none text-primary" style="display: flex; justify-content: center; align-items: center; border: 3px solid gray; width: 75px; height: 40px;">Next</a>
+        {% endif %}
+    </div>
+</body>
+
+</html>
+{% endblock body %}

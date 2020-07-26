@@ -1,0 +1,35 @@
+.search-bar{
+    width: 600px !important;
+    margin: auto !important;
+    text-align: center;
+}
+.navbar-brand{
+    font-size: 2.4rem !important;
+    font-family: 'Grenze Gotisch', cursive;
+    font-weight: bold;
+    color: #15f4ee !important;
+}
+.nav-item{
+    font-size: 1.2rem !important;
+}
+.card{
+    width: 300px !important;
+    height: 320px !important;
+    margin: 30px 20px !important;
+    transition: .3s;
+    border: none !important;
+}
+.card:hover{
+    width: 330px !important;
+    height: 350px !important;
+    border: 8px solid black !important;
+}
+.pg-num{
+    width: 45px;
+    height: 45px;
+    color: rgb(23, 46, 255) !important;
+    font-size: 12rem !important;
+    background-color: transparent !important;
+    border: 1.5px solid rgb(23, 46, 255) !important;
+}
+
